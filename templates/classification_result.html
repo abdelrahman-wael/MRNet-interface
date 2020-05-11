@@ -55,11 +55,34 @@
   <section id="results">
     <div class="container">
       <div class="row">
-          <div class = "card-body col-lg-8 mx-auto">
+          <div class = "col-lg-10 mx-auto">
                 <h4 class="card-title">Classification Results</h4>
                  <p class="card-text">There is {{data.label}} detected</p>
-          </div>
-          <img src="data:image/png;base64, {{ data.img }}">
+                 <div  id="results">
+                  <div class="card">
+                    <div id="MRIbtn">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#MRI" aria-expanded="false" aria-controls="MRI">
+                        Show the original MRI
+                      </button>
+                    </div>
+                    <div class="collapse ml-n5" id="MRI" aria-labelledby="MRIbtn" data-parent="#results">
+                      <img src="data:image/png;base64, {{ data.img }}">
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <div id="Visualizebtn">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#Visualize" aria-expanded="false" aria-controls="Visualize">
+                        Visualize the MRI
+                      </button>
+                    </div>
+                    <div class="collapse ml-n5" id="Visualize" aria-labelledby="Visualizabtn" data-parent="#results">
+                      <img src="data:image/png;base64, {{ data.img }}">
+                  </div>
+                  </div>
+                 </div>
+                 </div>
+          
         </div>
       </div>
     </div>
@@ -87,7 +110,7 @@
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-10 mx-auto">
           <h2>Contact us</h2>
           <p class="lead">
               <li> Email </li>

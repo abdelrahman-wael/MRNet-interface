@@ -97,5 +97,13 @@ def image_captioning():
     return render_template("image captioning.html")
 
 
+@app.route('/generate_caption', methods=['POST'])
+def generate():
+    print("CAPTIOOOOOOOOOOOON")
+    patient = request.files['file']
+    sentence = get_caption(patient)
+    print(sentence)
+    return render_template("classification_result.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
